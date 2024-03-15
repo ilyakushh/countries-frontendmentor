@@ -1,0 +1,12 @@
+.searchPanel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+  .searchPanel {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

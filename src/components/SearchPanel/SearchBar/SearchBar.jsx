@@ -1,4 +1,4 @@
-import styles from "../../../styles/SearchPanel/SearchBar.module.scss";
+import styles from "../../../styles/HomePage/SearchPanel/SearchBar.module.scss";
 import { FaSearch } from "react-icons/fa";
 
 const SearchBar = () => {

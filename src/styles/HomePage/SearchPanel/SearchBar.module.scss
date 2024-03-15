@@ -1,22 +1,28 @@
-@use "../common/colors.scss";
+@use "../../common/colors.scss";
 
 .searchBar {
   position: relative;
 
-  .icon {
+  & .icon {
     position: absolute;
-    color: colors.$lightInput;
     top: 50%;
-    left: 10%;
+    left: 50px;
     transform: translateY(-50%);
     font-size: 20px;
+    color: colors.$lightInput;
   }
 
-  input {
-    width: 550px;
+  & input {
+    max-width: 550px;
     height: 70px;
     padding-left: 100px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  input {
+    min-width: 100%;
   }
 }

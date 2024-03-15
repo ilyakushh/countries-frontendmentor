@@ -1,4 +1,4 @@
-import styles from "../../styles/CountryList/CountryList.module.scss";
+import styles from "../../styles/HomePage/CountryList/CountryList.module.scss";
 import CountryItem from "./CountryItem/CountryItem";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchCoutriesData } from "../../reducers/dataFetchSlice";

@@ -2,10 +2,11 @@
   &__control {
     height: 70px;
     width: 200px;
+    padding-left: 10px;
     border: 0 !important;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 10px !important;
-    padding-left: 10px;
+    cursor: pointer !important;
 
     &--is-focused {
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2) !important;

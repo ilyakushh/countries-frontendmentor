@@ -1,5 +1,5 @@
 import { IoArrowBack } from "react-icons/io5";
-import styles from "../styles/Details.module.scss";
+import styles from "../styles/DetailsPage/Details.module.scss";
 import InfoCard from "../components/InfoCard/InfoCard";
 import Button from "../components/UI/Button";
 

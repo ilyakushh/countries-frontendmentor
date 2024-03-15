@@ -1,0 +1,40 @@
+.countryItem {
+  background-color: #fff;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.image img {
+  height: 200px;
+}
+
+.description {
+  padding: 20px 20px 40px;
+
+  & h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 979px) {
+  .image img {
+    height: 280px;
+  }
+}
+
+@media (max-width: 630px) {
+  .countryItem {
+    max-width: 80%;
+  }
+
+  .image img {
+    height: auto;
+  }
+}

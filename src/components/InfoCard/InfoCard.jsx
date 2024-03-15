@@ -1,4 +1,4 @@
-import styles from "../../styles/InfoCard.module.scss";
+import styles from "../../styles/DetailsPage/InfoCard.module.scss";
 
 const InfoCard = () => {
   return (

@@ -1,4 +1,4 @@
-import styles from "../../../styles/CountryList/CountryItem.module.scss";
+import styles from "../../../styles/HomePage/CountryList/CountryItem.module.scss";
 
 const CountryItem = ({ flag, name, population, region, capital }) => {
   return (

@@ -4,3 +4,10 @@
   column-gap: 100px;
   row-gap: 50px;
 }
+
+@media (max-width: 630px) {
+  .countryListWrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
