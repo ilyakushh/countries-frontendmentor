@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   border: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
 }
 a {
   text-decoration: none;
@@ -11,10 +13,22 @@ a {
 ul {
   list-style: none;
 }
+input {
+  outline: none;
+}
 body {
   color: $lightText;
   overflow-x: hidden;
-  font-size: 14px;
+  background-color: $lightBg;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 // //The designs were created to the following widths:
 // - Mobile: 375px

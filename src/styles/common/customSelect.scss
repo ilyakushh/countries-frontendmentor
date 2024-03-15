@@ -1,0 +1,26 @@
+.customSelect {
+  &__control {
+    height: 70px;
+    width: 200px;
+    border: 0 !important;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px !important;
+    padding-left: 10px;
+
+    &--is-focused {
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2) !important;
+    }
+  }
+
+  &__indicator-separator {
+    display: none;
+  }
+
+  &__placeholder {
+    color: $lightText !important;
+  }
+
+  &__menu {
+    border-radius: 10px !important;
+  }
+}
