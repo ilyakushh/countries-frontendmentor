@@ -1,0 +1,24 @@
+.infoCard {
+  display: flex;
+  justify-content: space-between;
+  & img {
+    flex-basis: 40%;
+    max-height: 400px;
+  }
+}
+.information {
+  display: flex;
+  flex-basis: 55%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3.5vw;
+  & h3 {
+    font-size: 30px;
+  }
+  & ul {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 15px;
+  }
+}

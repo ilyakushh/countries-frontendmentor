@@ -25,11 +25,18 @@ img {
   width: 100%;
   height: auto;
 }
+button {
+  cursor: pointer;
+}
 .container {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 15px;
 }
+span {
+  font-weight: 600;
+}
+
 // //The designs were created to the following widths:
 // - Mobile: 375px
 // - Desktop: 1440px
