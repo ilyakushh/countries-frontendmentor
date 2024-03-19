@@ -1,6 +1,7 @@
 import SearchBar from "./SearchBar/SearchBar";
 import Select from "react-select";
 import styles from "../../styles/HomePage/SearchPanel/SearchPanel.module.scss";
+import { useState } from "react";
 
 const SearchPanel = () => {
   const options = [

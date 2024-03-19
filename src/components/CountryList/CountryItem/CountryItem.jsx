@@ -1,6 +1,6 @@
 import styles from "../../../styles/HomePage/CountryList/CountryItem.module.scss";
 
-const CountryItem = ({ flag, name, population, region, capital }) => {
+const CountryItem = ({ flag, name, info }) => {
   return (
     <div className={styles.countryItem}>
       <div className={styles.image}>
@@ -9,18 +9,12 @@ const CountryItem = ({ flag, name, population, region, capital }) => {
       <div className={styles.description}>
         <h3>{name}</h3>
         <ul className={styles.details}>
-          <li>
-            <span>Population: </span>
-            {population.toLocaleString()}
-          </li>
-          <li>
-            <span>Region: </span>
-            {region}
-          </li>
-          <li>
-            <span>Capital: </span>
-            {capital}
-          </li>
+          {info.map((item) => (
+            <li key={item.title}>
+              <span>{`${item.title}: `}</span>
+              {item.description}
+            </li>
+          ))}
         </ul>
       </div>
     </div>

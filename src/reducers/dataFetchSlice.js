@@ -34,7 +34,30 @@ export const dataFetchSlice = createSlice({
       })
       .addCase(fetchCoutriesData.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.countriesData = action.payload;
+        state.countriesData = action.payload.map((data) => ({
+          name: {
+            commonName: data.name.common,
+            nativeName: data.name.nativeName
+              ? Object.values(data.name.nativeName)[0]
+              : null,
+          },
+          capital: data.capital[0],
+          cca3: data.cca3,
+          currencies: Object.values(data.currencies).map(
+            (currency) => currency.name
+          ),
+
+          flags: {
+            svg: data.flags.svg,
+            png: data.flags.png,
+          },
+          languages: Object.values(data.languages),
+          population: data.population.toLocaleString(),
+          region: data.region,
+          subregion: data.subregion,
+          tld: data.tld[0],
+          borders: data.borders,
+        }));
       })
       .addCase(fetchCoutriesData.rejected, (state, action) => {
         state.isLoading = false;
