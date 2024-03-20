@@ -3,6 +3,7 @@
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .image img {
@@ -27,7 +28,7 @@
 
 @media (max-width: 630px) {
   .countryItem {
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .image img {
