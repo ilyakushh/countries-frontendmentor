@@ -6,8 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { setDarkTheme } from "../../reducers/darkModeSlice";
 
 const Header = () => {
-  const dispatch = useDispatch();
   const darkTheme = useSelector((state) => state.darkMode.darkTheme);
+
+  const dispatch = useDispatch();
+
   const toggleDarkMode = () => {
     dispatch(setDarkTheme());
   };

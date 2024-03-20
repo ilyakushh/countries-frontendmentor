@@ -1,8 +1,9 @@
-import styles from "../../../styles/HomePage/CountryList/CountryItem.module.scss";
 import { useSelector } from "react-redux";
+import styles from "../../../styles/HomePage/CountryList/CountryItem.module.scss";
 
 const CountryItem = ({ flag, name, info }) => {
   const darkTheme = useSelector((state) => state.darkMode.darkTheme);
+
   return (
     <div
       className={

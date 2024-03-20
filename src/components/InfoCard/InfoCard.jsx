@@ -1,5 +1,5 @@
-import styles from "../../styles/DetailsPage/InfoCard.module.scss";
 import { Link } from "react-router-dom";
+import styles from "../../styles/DetailsPage/InfoCard.module.scss";
 
 const InfoCard = ({
   name,

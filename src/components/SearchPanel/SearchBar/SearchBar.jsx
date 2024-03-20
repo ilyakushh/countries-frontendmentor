@@ -1,13 +1,16 @@
-import styles from "../../../styles/HomePage/SearchPanel/SearchBar.module.scss";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchTerm } from "../../../reducers/filterSlice";
+import styles from "../../../styles/HomePage/SearchPanel/SearchBar.module.scss";
 
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
+
   const darkTheme = useSelector((state) => state.darkMode.darkTheme);
+
   const dispatch = useDispatch();
+
   const handleInputChange = (event) => {
     const value = event.target.value;
     setInputValue(value);

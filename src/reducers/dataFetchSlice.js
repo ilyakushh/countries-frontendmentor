@@ -12,10 +12,13 @@ export const fetchCoutriesData = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await fetch(ALL_COUNTRIES);
+
       if (!response.ok) {
         throw new Error("Server error");
       }
+
       const data = await response.json();
+
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
