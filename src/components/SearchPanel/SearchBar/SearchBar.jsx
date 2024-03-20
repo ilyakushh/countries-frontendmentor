@@ -1,12 +1,12 @@
 import styles from "../../../styles/HomePage/SearchPanel/SearchBar.module.scss";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setSearchTerm } from "../../../reducers/filterSlice";
 
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
-
+  const darkTheme = useSelector((state) => state.darkMode.darkTheme);
   const dispatch = useDispatch();
   const handleInputChange = (event) => {
     const value = event.target.value;
@@ -14,15 +14,18 @@ const SearchBar = () => {
     dispatch(setSearchTerm(value));
   };
 
-  //только доделал поиск по Input
-  //нужно перепроверить что сделал тк сделал при помощи gpt
   return (
-    <div className={styles.searchBar}>
+    <div
+      className={
+        darkTheme ? `${styles.darkTheme} ${styles.searchBar}` : styles.searchBar
+      }
+    >
       <FaSearch className={styles.icon} />
       <input
         type="text"
         placeholder="Search for a country..."
         value={inputValue}
+        className={darkTheme ? styles.darkMode : ""}
         onChange={handleInputChange}
       />
     </div>

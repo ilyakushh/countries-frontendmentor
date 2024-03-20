@@ -1,5 +1,8 @@
+@import "../common/index.scss";
+
 .details {
   padding: 50px 0;
+  min-height: 85vh;
 }
 
 .button {
@@ -10,6 +13,11 @@
   margin-bottom: 50px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+}
+
+.darkMode {
+  background-color: $darkBlue;
+  color: #fff;
 }
 
 .icon {

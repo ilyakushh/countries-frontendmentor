@@ -1,7 +1,12 @@
+@import "./common/index.scss";
+
 .header {
   padding: 2rem 0;
   background-color: #fff;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.darkMode {
+  background-color: $darkBlue;
 }
 
 .headerWrapper {

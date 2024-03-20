@@ -1,11 +1,12 @@
 import SearchBar from "./SearchBar/SearchBar";
 import Select from "react-select";
 import styles from "../../styles/HomePage/SearchPanel/SearchPanel.module.scss";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setRegion } from "../../reducers/filterSlice";
 
 const SearchPanel = () => {
   const dispatch = useDispatch();
+  const darkTheme = useSelector((state) => state.darkMode.darkTheme);
   const options = [
     { value: "All", label: "All" },
     { value: "Africa", label: "Africa" },
@@ -23,7 +24,9 @@ const SearchPanel = () => {
       <Select
         options={options}
         isSearchable={false}
-        classNamePrefix="customSelect"
+        classNamePrefix={
+          darkTheme ? `customSelectDark customSelect` : "customSelect"
+        }
         placeholder="Filter by Region"
         onChange={handleRegionChange}
       />

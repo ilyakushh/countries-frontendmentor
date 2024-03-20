@@ -1,4 +1,4 @@
-@use "../../common/colors.scss";
+@import "../../common/index.scss";
 
 .searchBar {
   position: relative;
@@ -9,15 +9,26 @@
     left: 50px;
     transform: translateY(-50%);
     font-size: 20px;
-    color: colors.$lightInput;
+    color: $lightInput;
   }
 
   & input {
     max-width: 550px;
     height: 70px;
-    padding-left: 100px;
+    padding-left: 80px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    color: $lightInput;
+  }
+}
+
+.darkTheme {
+  & input {
+    background-color: $darkBlue;
+    color: #fff;
+  }
+  & .icon {
+    color: #fff;
   }
 }
 

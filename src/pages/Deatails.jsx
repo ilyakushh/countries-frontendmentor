@@ -7,14 +7,13 @@ import { useSelector } from "react-redux";
 import { RotatingLines } from "react-loader-spinner";
 
 const Deatails = () => {
+  const darkTheme = useSelector((state) => state.darkMode.darkTheme);
   const countriesData = useSelector((state) => state.countries.countriesData);
   const isLoading = useSelector((state) => state.countries.isLoading);
   const location = useParams();
-  // const navigation = useNavigate()
   const countryData = countriesData.find(
     (country) => country.name.commonName === location.name
   );
-  //  if (!countryData && isLoading)
   const findBorders = () => {
     if (!countryData || !countryData.borders) return [];
     return countryData.borders.map((borderCode) => {
@@ -25,7 +24,6 @@ const Deatails = () => {
     });
   };
   const borderCountries = findBorders();
-  console.log(findBorders());
   return (
     <div className={styles.details}>
       {isLoading ? (
@@ -42,7 +40,13 @@ const Deatails = () => {
       ) : (
         <div className="container">
           <Link to="..">
-            <Button className={styles.button}>
+            <Button
+              className={
+                darkTheme
+                  ? `${styles.button} ${styles.darkMode}`
+                  : styles.button
+              }
+            >
               <IoArrowBack className={styles.icon} />
               Back
             </Button>

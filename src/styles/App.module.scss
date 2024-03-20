@@ -1,1 +1,9 @@
-
+@import "./common/colors.scss";
+.appLight {
+  color: $lightText;
+  background-color: $lightBg;
+}
+.appDark {
+  color: #fff;
+  background-color: $darkBg;
+}
