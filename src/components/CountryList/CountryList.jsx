@@ -20,7 +20,7 @@ const CountryList = () => {
         country.name.commonName
           .toLowerCase()
           .includes(searchTerm.toLowerCase()) &&
-        (!regionFilter || country.region === regionFilter) // Добавляем условие для фильтрации по региону
+        (!regionFilter || country.region === regionFilter)
     );
   }, [countriesData, searchTerm, regionFilter]);
 
